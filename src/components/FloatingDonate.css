@@ -1,0 +1,46 @@
+.floating-donate {
+  position: fixed;
+  bottom: 30px;
+  z-index: 9999;
+}
+
+.floating-donate.ltr {
+  right: 30px;
+}
+
+.floating-donate.rtl {
+  left: 30px;
+}
+
+.floating-donate-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow-lg);
+  transition: background 0.2s ease, transform 0.2s ease;
+  border: 1px solid var(--primary-dark);
+}
+
+.floating-donate-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.floating-donate-icon {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .floating-donate-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}

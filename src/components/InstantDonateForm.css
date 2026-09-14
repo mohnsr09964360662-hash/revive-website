@@ -1,0 +1,151 @@
+.instantDonateCard {
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  padding: 1.8rem;
+  width: 360px;
+  max-width: 100%;
+  color: #333333;
+  border: 1px solid #e0e0e0;
+}
+
+.instantHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.instantHeader h4 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1e6c46;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.instantHeartIcon {
+  color: #c80001;
+  font-size: 1.3rem;
+}
+
+.instantForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.frequencyBtns {
+  display: flex;
+  background: #f4f6f8;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+}
+
+.freqBtn {
+  flex: 1;
+  padding: 8px 0;
+  border: none;
+  background: transparent;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #555;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.freqBtn.active {
+  background: #1e6c46;
+  color: white;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formGroup label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #444;
+}
+
+.causeSelect {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #1e6c46;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  background: #fff;
+  cursor: pointer;
+}
+
+.amountGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.amtBtn {
+  padding: 10px 0;
+  border: 1px solid #1e6c46;
+  background: #fff;
+  color: #1e6c46;
+  font-weight: 800;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.amtBtn.active, .amtBtn:hover {
+  background: #1e6c46;
+  color: white;
+}
+
+.customAmtInput {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currencySymbol {
+  position: absolute;
+  left: 12px;
+  font-weight: 800;
+  color: #1e6c46;
+}
+
+.rtl .currencySymbol {
+  left: auto;
+  right: 12px;
+}
+
+.customAmtInput input {
+  width: 100%;
+  padding: 10px 12px 10px 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.rtl .customAmtInput input {
+  padding: 10px 30px 10px 12px;
+}
+
+.addBasketSubmitBtn {
+  width: 100%;
+  justify-content: center;
+  padding: 14px 0;
+  font-size: 0.95rem;
+}

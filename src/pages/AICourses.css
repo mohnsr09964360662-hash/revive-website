@@ -1,0 +1,337 @@
+/* AICourses.css - Styled to match REVIVE Brand Colors */
+
+.techCoursesPage {
+  background-color: #f8faf9;
+  min-height: 100vh;
+  color: #2c3e50;
+  font-family: 'Almarai', sans-serif;
+}
+
+/* Page Header */
+.coursesHeaderSection {
+  background: linear-gradient(135deg, #0f2e21 0%, #1e6c46 100%);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+  position: relative;
+}
+
+.coursesHeaderContent {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.coursesSubBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #4bd891;
+  padding: 6px 16px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+}
+
+.coursesHeaderSection h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.coursesHeaderSection p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* Filter Bar */
+.coursesCatalogSection {
+  padding: 50px 0 90px;
+}
+
+.courseFilterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
+.filterTabBtn {
+  background: #ffffff;
+  border: 1px solid #dcdfe4;
+  color: #4a5568;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border-radius: 4px;
+}
+
+.filterTabBtn:hover {
+  border-color: #1e6c46;
+  color: #1e6c46;
+  background: #f0f8f4;
+}
+
+.filterTabBtn.active {
+  background: #1e6c46;
+  color: #ffffff;
+  border-color: #1e6c46;
+  box-shadow: 0 4px 12px rgba(30, 108, 70, 0.25);
+}
+
+/* Courses Grid */
+.coursesGridModern {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 30px;
+}
+
+.courseCardModern {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.courseCardModern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #1e6c46;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.courseCardModern:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(30, 108, 70, 0.12);
+  border-color: #cde6d8;
+}
+
+.courseCardModern:hover::before {
+  opacity: 1;
+}
+
+.courseCardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.courseIconBox {
+  width: 54px;
+  height: 54px;
+  background: #eaf6ef;
+  color: #1e6c46;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+
+.courseCardModern:hover .courseIconBox {
+  background: #1e6c46;
+  color: #ffffff;
+}
+
+.courseLevelBadge {
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.courseCardBody h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f2e21;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.courseCardBody p {
+  font-size: 0.95rem;
+  color: #556270;
+  line-height: 1.65;
+  margin-bottom: 25px;
+}
+
+.courseCardFooter {
+  border-top: 1px solid #edf2f7;
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.courseDurationInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.courseDurationInfo svg {
+  color: #1e6c46;
+}
+
+.courseRegisterBtn {
+  background: #1e6c46;
+  color: #ffffff;
+  border: none;
+  padding: 9px 20px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.courseRegisterBtn:hover {
+  background: #165335;
+  transform: scale(1.03);
+}
+
+/* Registration Modal */
+.courseModalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.courseModalBox {
+  background: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  padding: 30px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  border-top: 5px solid #1e6c46;
+  position: relative;
+}
+
+.courseModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #edf2f7;
+  padding-bottom: 15px;
+}
+
+.modalSmallTag {
+  color: #1e6c46;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.courseModalHeader h3 {
+  font-size: 1.25rem;
+  color: #0f2e21;
+  font-weight: 800;
+}
+
+.modalCloseBtn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.modalCloseBtn:hover {
+  color: #e53e3e;
+}
+
+.courseModalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modalFormGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.modalFormGroup label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.modalFormGroup input,
+.modalFormGroup textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.modalFormGroup input:focus,
+.modalFormGroup textarea:focus {
+  outline: none;
+  border-color: #1e6c46;
+  box-shadow: 0 0 0 3px rgba(30, 108, 70, 0.15);
+}
+
+.modalSubmitBtn {
+  width: 100%;
+  justify-content: center;
+  padding: 12px;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .coursesHeaderSection h1 {
+    font-size: 2rem;
+  }
+  .coursesGridModern {
+    grid-template-columns: 1fr;
+  }
+  .courseFilterBar {
+    gap: 8px;
+  }
+  .filterTabBtn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}

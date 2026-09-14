@@ -1,0 +1,505 @@
+/* ==========================================================================
+   REVIVE Foundation - FAQ Page Styles
+   Brand Colors: Dark Green (#0f2e21), Primary (#1e6c46), Accent (#27a768)
+   Font: 'Almarai', sans-serif
+   Style: Sharp corners (0 border-radius), Premium humanitarian editorial design
+   ========================================================================== */
+
+.faq-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f7f9fa;
+  font-family: 'Almarai', sans-serif;
+  color: #222;
+}
+
+.faq-page .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --------------------------------------------------------------------------
+   1. Page Header (Hero Banner)
+   -------------------------------------------------------------------------- */
+.faq-page .page-header {
+  background: linear-gradient(135deg, #0f2e21 0%, #174b33 50%, #1e6c46 100%);
+  color: #ffffff;
+  padding: 80px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(15, 46, 33, 0.15);
+}
+
+.faq-page .page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 75% 25%, rgba(39, 167, 104, 0.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.faq-hero .hero-header-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.faq-hero .page-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 18px;
+  line-height: 1.25;
+}
+
+.faq-hero .hero-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   2. Search & Filter Controls
+   -------------------------------------------------------------------------- */
+.faq-controls-section {
+  padding: 40px 0 20px;
+  margin-top: -30px;
+  position: relative;
+  z-index: 10;
+}
+
+.faq-controls-wrapper {
+  background: #ffffff;
+  border: 1px solid #dfe5e1;
+  border-radius: 0;
+  padding: 24px 30px;
+  box-shadow: 0 8px 24px rgba(15, 46, 33, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.faq-search-box .search-icon {
+  position: absolute;
+  color: #1e6c46;
+  font-size: 1.15rem;
+  right: 18px;
+  pointer-events: none;
+}
+
+[dir="ltr"] .faq-search-box .search-icon {
+  right: auto;
+  left: 18px;
+}
+
+.faq-search-box input {
+  width: 100%;
+  padding: 15px 48px 15px 18px;
+  font-size: 1rem;
+  font-family: 'Almarai', sans-serif;
+  background-color: #fafcfb;
+  border: 1px solid #d4ded9;
+  border-radius: 0;
+  outline: none;
+  transition: all 0.25s ease;
+  color: #1f2d27;
+}
+
+[dir="ltr"] .faq-search-box input {
+  padding: 15px 18px 15px 48px;
+}
+
+.faq-search-box input:focus {
+  background-color: #ffffff;
+  border-color: #1e6c46;
+  box-shadow: 0 0 0 3px rgba(30, 108, 70, 0.12);
+}
+
+.clear-search-btn {
+  position: absolute;
+  left: 14px;
+  background: #edf3f0;
+  border: none;
+  border-radius: 0;
+  color: #556b60;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: 'Almarai', sans-serif;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+[dir="ltr"] .clear-search-btn {
+  left: auto;
+  right: 14px;
+}
+
+.clear-search-btn:hover {
+  background: #dbe8e1;
+  color: #0f2e21;
+}
+
+/* Category Filter Pills */
+.faq-categories-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.category-pill-btn {
+  background: #f1f5f3;
+  color: #3b5046;
+  border: 1px solid #dce5e0;
+  border-radius: 0;
+  padding: 9px 18px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  font-family: 'Almarai', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.category-pill-btn:hover {
+  background: #e1ede6;
+  color: #0f2e21;
+  border-color: #b9d1c3;
+}
+
+.category-pill-btn.active {
+  background: #1e6c46;
+  color: #ffffff;
+  border-color: #1e6c46;
+}
+
+/* --------------------------------------------------------------------------
+   3. Accordion List
+   -------------------------------------------------------------------------- */
+.faq-accordion-section {
+  padding: 30px 0 70px;
+}
+
+.faq-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-accordion-card {
+  background: #ffffff;
+  border: 1px solid #e1e7e4;
+  border-radius: 0;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 10px rgba(15, 46, 33, 0.03);
+}
+
+.faq-accordion-card:hover {
+  border-color: #b8cfc2;
+  box-shadow: 0 6px 18px rgba(15, 46, 33, 0.06);
+}
+
+.faq-accordion-card.is-open {
+  border-color: #1e6c46;
+  border-right: 4px solid #1e6c46;
+}
+
+[dir="ltr"] .faq-accordion-card.is-open {
+  border-right: 1px solid #1e6c46;
+  border-left: 4px solid #1e6c46;
+}
+
+.faq-question-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 26px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  text-align: inherit;
+  font-family: 'Almarai', sans-serif;
+  cursor: pointer;
+  outline: none;
+}
+
+.question-number {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #27a768;
+  background: #eef8f2;
+  padding: 4px 10px;
+  border-radius: 0;
+  border: 1px solid rgba(39, 167, 104, 0.2);
+  flex-shrink: 0;
+}
+
+.question-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f2e21;
+  flex: 1;
+  line-height: 1.45;
+  transition: color 0.2s ease;
+}
+
+.faq-accordion-card.is-open .question-title {
+  color: #1e6c46;
+}
+
+.chevron-wrap {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6a7c73;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.chevron-wrap.rotated {
+  transform: rotate(180deg);
+  color: #1e6c46;
+}
+
+.faq-answer-wrapper {
+  overflow: hidden;
+}
+
+.faq-answer-content {
+  padding: 0 26px 24px;
+  border-top: 1px solid #f0f4f1;
+  margin-top: 4px;
+  padding-top: 18px;
+}
+
+.faq-answer-content p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #495d53;
+  margin: 0;
+}
+
+/* No results block */
+.faq-no-results {
+  text-align: center;
+  background: #ffffff;
+  padding: 50px 30px;
+  border: 1px dashed #cedbd2;
+  border-radius: 0;
+}
+
+.no-results-icon {
+  font-size: 3rem;
+  color: #9cb3a7;
+  margin-bottom: 16px;
+}
+
+.faq-no-results h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0f2e21;
+  margin-bottom: 8px;
+}
+
+.faq-no-results p {
+  font-size: 0.95rem;
+  color: #687c71;
+  margin-bottom: 20px;
+}
+
+.reset-filter-btn {
+  background: #1e6c46;
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+  padding: 12px 24px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  font-family: 'Almarai', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reset-filter-btn:hover {
+  background: #0f2e21;
+}
+
+/* --------------------------------------------------------------------------
+   4. Contact CTA Box
+   -------------------------------------------------------------------------- */
+.faq-contact-cta {
+  padding: 0 0 90px;
+}
+
+.cta-card-box {
+  background: linear-gradient(135deg, #0f2e21 0%, #174b33 50%, #1e6c46 100%);
+  color: #ffffff;
+  border-radius: 0;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  box-shadow: 0 12px 36px rgba(15, 46, 33, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-card-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle at 90% 10%, rgba(39, 167, 104, 0.22) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.cta-tag {
+  display: inline-block;
+  color: #4bd891;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.cta-content h2 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.cta-content p {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+}
+
+.cta-actions {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 230px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: 'Almarai', sans-serif;
+  border-radius: 0;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.cta-button.primary-cta {
+  background: #ffffff;
+  color: #0f2e21;
+  border: 1px solid #ffffff;
+}
+
+.cta-button.primary-cta:hover {
+  background: #edf8f2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button.secondary-cta {
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+}
+
+.cta-button.secondary-cta:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   5. Responsive Styles
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .cta-card-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 30px;
+  }
+
+  .cta-actions {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .cta-button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .faq-page .page-header {
+    padding: 60px 18px;
+  }
+
+  .faq-hero .page-title {
+    font-size: 2.1rem;
+  }
+
+  .faq-controls-wrapper {
+    padding: 20px 16px;
+  }
+
+  .faq-question-btn {
+    padding: 18px 16px;
+    gap: 12px;
+  }
+
+  .question-title {
+    font-size: 1.02rem;
+  }
+
+  .faq-answer-content {
+    padding: 0 16px 18px;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+  }
+}

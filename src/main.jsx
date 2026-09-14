@@ -1,0 +1,19 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { HashRouter } from 'react-router-dom';
+import App from './App';
+import { LanguageProvider } from './i18n/LanguageContext';
+import { HelmetProvider } from 'react-helmet-async';
+import './styles/global.css';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <HashRouter>
+      <LanguageProvider>
+        <HelmetProvider>
+          <App />
+        </HelmetProvider>
+      </LanguageProvider>
+    </HashRouter>
+  </React.StrictMode>
+);

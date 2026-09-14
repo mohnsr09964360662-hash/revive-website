@@ -1,0 +1,95 @@
+.quick-donate-bar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 400px;
+  background: #2c2c2c;
+  color: #fff;
+  z-index: 9998;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  transition: max-height 0.3s ease;
+}
+
+.qdb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  background: #222;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.qdb-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.qdb-heart {
+  color: #e53935;
+}
+
+.qdb-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.qdb-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 20px;
+  background: #2c2c2c;
+}
+
+.quick-donate-bar.open .qdb-body {
+  max-height: 200px;
+  padding: 20px;
+}
+
+.qdb-amounts {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.qdb-amount-btn {
+  flex: 1;
+  background: transparent;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 8px 0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.qdb-amount-btn:hover {
+  background: #444;
+  border-color: #777;
+}
+
+.qdb-donate-btn {
+  width: 100%;
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.qdb-donate-btn:hover {
+  background: #d32f2f;
+}

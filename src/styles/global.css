@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Almarai', sans-serif !important;
+}
+
+:root {
+  --primary: #27a768;
+  --primary-dark: #1e8551;
+  --primary-light: #4bd891;
+  --secondary: #2c3e50;
+  --accent-red: #c80001;
+  --text: #333;
+  --text-light: #666;
+  --bg: #fff;
+  --bg-alt: #f4f6f8;
+  --border: #e0e0e0;
+  --font-main: 'Almarai', sans-serif;
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Almarai', sans-serif !important;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="ltr"] {
+  text-align: left;
+}
+
+.auto__container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-radius: 0;
+  padding: 14px 32px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.button.primary {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+}
+
+.button.primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.button.don {
+  background-color: var(--accent-red);
+  color: #fff;
+  border: none;
+}
+
+.button.don:hover {
+  opacity: 0.9;
+}
+
+.button.outline {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.button.outline:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.link {
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.link:hover {
+  gap: 12px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+}
+
+/* Fix fixed header overlap on all inner pages */
+.main-content.page-layout {
+  padding-top: 145px;
+  min-height: calc(100vh - 400px);
+}
+
+@media (max-width: 1024px) {
+  .main-content.page-layout {
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content.page-layout {
+    padding-top: 110px;
+  }
+}

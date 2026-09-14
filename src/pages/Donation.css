@@ -1,0 +1,203 @@
+.donation-page .page-header {
+  background-color: var(--primary);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.donation-page .header-desc {
+  max-width: 700px;
+  margin: 15px auto 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.donation-section {
+  padding: 80px 0;
+  background-color: var(--bg-alt);
+}
+
+.donation-split-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+@media (min-width: 992px) {
+  .donation-split-layout {
+    flex-direction: row;
+  }
+
+  .donation-project-info {
+    flex: 1;
+    position: sticky;
+    top: 100px; 
+  }
+
+  .donation-form-wrapper {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+.project-info-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.project-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-info-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(15, 46, 33, 0.9) 0%, rgba(30, 108, 70, 0) 100%);
+  padding: 30px 20px 20px;
+  color: white;
+}
+
+.image-overlay h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+.project-desc {
+  padding: 25px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  background-color: #fff;
+  border-top: 4px solid var(--primary);
+}
+
+.donation-form-container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.donation-form-container h2 {
+  text-align: center;
+  color: var(--secondary);
+  margin-bottom: 30px;
+}
+
+.donation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.form-group select,
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: var(--transition);
+  background-color: var(--bg-alt);
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%232c3e50%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat, repeat;
+  background-position: right 15px top 50%, 0 0;
+  background-size: .65em auto, 100%;
+}
+
+html[dir="rtl"] .form-group select {
+  background-position: left 15px top 50%, 0 0;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(39, 167, 104, 0.15);
+}
+
+.amount-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.amount-input-wrapper .currency-symbol {
+  position: absolute;
+  left: 15px;
+  color: var(--text-light);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+html[dir="rtl"] .amount-input-wrapper .currency-symbol {
+  left: auto;
+  right: 15px;
+}
+
+.amount-input-wrapper input {
+  padding-left: 35px;
+}
+
+html[dir="rtl"] .amount-input-wrapper input {
+  padding-left: 15px;
+  padding-right: 35px;
+}
+
+.donate-submit-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 16px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #c3e6cb;
+}
